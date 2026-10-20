@@ -20,7 +20,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;800&family=Nunito:wght@500;700;800&display=swap">
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"Book","name":"Los Pintamigos","alternativeHeadline":"Mi gran libro para colorear. 40 dibujos grandes de animales, vehículos y dinosaurios para niños y niñas de 3 a 6 años","inLanguage":"es","numberOfPages":96,"bookFormat":"https://schema.org/Paperback","typicalAgeRange":"3-6","image":"https://lospintamigos.github.io/portada.jpg","url":"https://lospintamigos.github.io/"}
+{"@context":"https://schema.org","@type":"Book","name":"Los Pintamigos","alternativeHeadline":"Mi gran libro para colorear. 40 dibujos grandes de animales, vehículos y dinosaurios para niños y niñas de 3 a 6 años","inLanguage":"es","numberOfPages":96,"bookFormat":"https://schema.org/Paperback","offers":[{"@type":"Offer","name":"Libro impreso","price":"14.95","priceCurrency":"EUR"},{"@type":"Offer","name":"PDF para imprimir","price":"4.99","priceCurrency":"EUR"}],"typicalAgeRange":"3-6","image":"https://lospintamigos.github.io/portada.jpg","url":"https://lospintamigos.github.io/"}
 </script>
 <style>
 /* Layout: a sky-blue cover band with the book, then the book's own world in order: what's inside, why it works for small hands, the phone app, questions. Brand colours come straight from the printed cover. */
@@ -52,6 +52,8 @@ h2{font-size:clamp(1.9rem,4.6vw,2.8rem)}
 .nav a:hover{background:#fff}
 @media (max-width:700px){.nav a:not(.pill){display:none}}
 .pill{background:#fff;border:2px solid var(--ink)}
+.buy-pill{background:var(--sun)}
+@media (max-width:420px){.nav .pill:not(.buy-pill){display:none}}
 
 /* hero */
 .hero{background:var(--sky);position:relative;overflow:hidden}
@@ -133,6 +135,30 @@ summary::after{content:"+";font-family:var(--font-display);font-size:1.6rem;line
 details[open] summary::after{content:"–"}
 details p{margin:0 0 16px}
 
+/* shop */
+.shop{background:var(--paper)}
+.offers{display:grid;grid-template-columns:repeat(2,1fr);gap:22px;align-items:stretch}
+@media (max-width:820px){.offers{grid-template-columns:1fr}}
+.offer{border:3px solid var(--ink);border-radius:var(--r);background:#fff;box-shadow:0 6px 0 var(--ink);display:flex;flex-direction:column;overflow:hidden}
+.offer .top{position:static;border:0;background:var(--sun);padding:16px 20px;display:flex;justify-content:space-between;align-items:flex-start;gap:12px}
+.offer.pdf .top{background:#DDF1FF}
+.offer h3{font-size:1.65rem}
+.offer .tagline{font-weight:800;font-size:.9rem;margin-top:2px}
+.price{font-family:var(--font-display);font-weight:800;font-size:2.3rem;line-height:1;white-space:nowrap;text-align:right}
+.price small{display:block;font-family:var(--font-body);font-size:.75rem;font-weight:800;color:var(--ink-soft);margin-top:4px}
+@media (max-width:480px){.offer .top{flex-direction:column;gap:6px}.price{text-align:left}.price small{display:inline;margin-left:8px}}
+.offer .body{padding:18px 20px 20px;display:flex;flex-direction:column;gap:14px;flex:1}
+.offer ul{margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:8px}
+.offer li{display:flex;gap:10px;align-items:flex-start;font-size:.97rem}
+.offer li::before{content:"";flex:0 0 20px;height:20px;border-radius:50%;background:var(--leaf) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='3.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 12l5 5 9-10'/%3E%3C/svg%3E") center/12px no-repeat;margin-top:3px}
+.offer .btn{justify-content:center;margin-top:auto}
+.offer .fine{font-size:.82rem;color:var(--ink-soft);margin:0}
+.trust{display:flex;flex-wrap:wrap;gap:10px 22px;margin-top:22px;font-weight:800;font-size:.92rem;color:var(--ink-soft)}
+.trust span{display:inline-flex;gap:8px;align-items:center}
+.trust svg{width:20px;height:20px}
+.alt{margin-top:14px;font-size:.95rem}
+.alt[hidden]{display:none}
+footer nav{display:flex;gap:16px;flex-wrap:wrap}
 footer{background:var(--ink);color:#fff;padding-block:36px calc(36px + env(safe-area-inset-bottom,0px))}
 footer .wrap{display:flex;flex-wrap:wrap;gap:12px 28px;justify-content:space-between;align-items:center}
 footer .logo{color:#fff;text-shadow:none}
@@ -150,6 +176,7 @@ footer a{font-weight:800}
       <a href="#manos">Para manos pequeñas</a>
       <a href="#preguntas">Preguntas</a>
       <a class="pill" href="/colorear/">Pintar en el móvil</a>
+      <a class="pill buy-pill" href="#comprar">Comprar</a>
     </nav>
   </div>
 </header>
@@ -163,16 +190,16 @@ footer a{font-weight:800}
         <div class="sub">Mi gran libro para colorear</div>
         <p class="lead">40 dibujos de animales, vehículos y dinosaurios con líneas gruesas y espacios grandes, para que pintar sea fácil desde los 3 años.</p>
         <div class="ctas">
-          <a class="btn primary" id="buy" href="#" aria-disabled="true">
+          <a class="btn primary" href="#comprar">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 4h2l2.4 11h11L21 7H7"/><circle cx="9" cy="19.5" r="1.6"/><circle cx="17" cy="19.5" r="1.6"/></svg>
-            <span id="buyTxt">Comprar en Amazon</span>
+            Comprar el libro · 14,95 €
           </a>
           <a class="btn" href="/colorear/">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="2.5" width="12" height="19" rx="3"/><path d="M11 18h2"/></svg>
             Pintar gratis en el móvil
           </a>
         </div>
-        <p class="note" id="buyNote">Tapa blanda · 96 páginas · 21,6 × 27,9 cm</p>
+        <p class="note">Envío incluido a la península y Baleares · También en PDF para imprimir en casa</p>
       </div>
       <img class="book" src="portada.jpg" width="720" height="932" alt="Portada de Los Pintamigos: una vaca, un tractor y un triceratops sonrientes en un prado">
     </div>
@@ -214,6 +241,50 @@ footer a{font-weight:800}
     </div>
   </section>
 
+  <section class="shop" id="comprar">
+    <div class="wrap">
+      <div class="head">
+        <div class="eyebrow">Comprar</div>
+        <h2>Elige tu Pintamigos</h2>
+        <p>Los mismos 40 dibujos en papel, listo para regalar, o en PDF para imprimir en casa las veces que quieras.</p>
+      </div>
+      <div class="offers">
+        <article class="offer">
+          <div class="top"><div><h3>Libro impreso</h3><div class="tagline">Tapa blanda · 96 páginas · 21,6 × 27,9 cm</div></div><div class="price">14,95 €<small>Envío incluido</small></div></div>
+          <div class="body">
+            <ul>
+              <li>40 dibujos grandes, uno por página y con el reverso en blanco</li>
+              <li>Diploma de Gran Pintamigo y página «Este libro es de»</li>
+              <li>Código QR para seguir pintando en el móvil o la tablet</li>
+              <li>Envío gratis a la península y Baleares en 2 a 5 días laborables</li>
+            </ul>
+            <a class="btn primary" id="buyBook" href="#">Comprar el libro impreso</a>
+            <p class="fine">Pagas con tarjeta, Apple Pay o Google Pay. Te pediremos la dirección de envío al pagar.</p>
+          </div>
+        </article>
+        <article class="offer pdf">
+          <div class="top"><div><h3>PDF para imprimir</h3><div class="tagline">Descarga inmediata · 45 páginas para A4 o carta</div></div><div class="price">4,99 €<small>Sin envío</small></div></div>
+          <div class="body">
+            <ul>
+              <li>Los 40 dibujos, la portada, la página «Este libro es de» y el diploma</li>
+              <li>Imprime solo los que quieras y repite los favoritos</li>
+              <li>Ideal para casa y para que pinten varios hermanos a la vez</li>
+              <li>Uso familiar y personal: no se puede revender ni compartir</li>
+            </ul>
+            <a class="btn" id="buyPdf" href="#">Comprar el PDF</a>
+            <p class="fine">El enlace de descarga aparece en cuanto se completa el pago.</p>
+          </div>
+        </article>
+      </div>
+      <div class="trust">
+        <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round"><rect x="4" y="10" width="16" height="11" rx="2"/><path d="M8 10V7a4 4 0 018 0v3"/></svg>Pago seguro con Stripe</span>
+        <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7h11v9H3zM14 10h4l3 3v3h-7"/><circle cx="7" cy="17.5" r="1.8"/><circle cx="17" cy="17.5" r="1.8"/></svg>Envío incluido en el impreso</span>
+        <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12a8 8 0 1 0 3-6.2"/><path d="M4 4v4h4"/></svg>14 días para devolver el libro impreso</span>
+      </div>
+      <p class="alt" id="amazonAlt" hidden>¿Prefieres Amazon? <a id="amazonLink" href="#" target="_blank" rel="noopener">También está a la venta en Amazon</a>.</p>
+    </div>
+  </section>
+
   <section class="app" id="movil">
     <div class="wrap">
       <div class="phone" aria-hidden="true">
@@ -247,7 +318,10 @@ footer a{font-weight:800}
         <details><summary>¿Con qué se puede pintar?</summary><p>Con ceras, lápices de colores o rotuladores. Cada dibujo va en una página con el reverso en blanco, así que aunque traspase un poco no estropea el siguiente.</p></details>
         <details><summary>¿Qué tamaño tiene?</summary><p>21,6 × 27,9 cm, un poco más ancho que un folio. Tiene 96 páginas en tapa blanda.</p></details>
         <details><summary>¿Cómo funciona lo del móvil?</summary><p>Escanea el código QR de la última parte del libro con la cámara del móvil. Se abre una web con los mismos dibujos: se elige uno, se elige un color y se toca la zona para rellenarla. No hace falta descargar nada.</p></details>
-        <details><summary>¿Dónde lo compro?</summary><p id="faqBuy">Se vende en Amazon. Muy pronto pondremos aquí el enlace directo.</p></details>
+        <details><summary>¿Dónde lo compro?</summary><p>Aquí mismo, en la sección <a href="#comprar">Comprar</a>: el libro impreso con envío incluido o el PDF para imprimir. También se vende en Amazon.</p></details>
+        <details><summary>¿Cuánto tarda el envío?</summary><p>Enviamos el libro impreso en 2 a 5 días laborables a la península y Baleares, sin coste de envío. Por ahora no enviamos a Canarias, Ceuta, Melilla ni fuera de España.</p></details>
+        <details><summary>¿Cómo funciona el PDF?</summary><p>Al terminar el pago aparece el enlace para descargarlo. Son 45 páginas en tamaño carta que se imprimen bien en folio A4: elige «Ajustar a la página» al imprimir. Es para uso familiar: puedes imprimirlo las veces que quieras en casa, pero no compartirlo ni venderlo.</p></details>
+        <details><summary>¿Y si el libro llega dañado?</summary><p>Escríbenos con una foto y te enviamos otro sin coste. Además tienes 14 días desde que lo recibes para devolverlo. Lo explicamos en las <a href="/legal/#condiciones">condiciones de venta</a>.</p></details>
         <details><summary>¿Habrá más libros?</summary><p>Sí. Los Pintamigos 2 ya está en camino, con nuevos amigos para pintar.</p></details>
       </div>
     </div>
@@ -257,13 +331,15 @@ footer a{font-weight:800}
 <footer>
   <div class="wrap">
     <span class="logo">Los Pintamigos</span>
-    <p>© 2026 Los Pintamigos · Esta web no usa cookies ni recoge datos.</p>
-    <a href="/colorear/">Pintar en el móvil →</a>
+    <p>© 2026 Los Pintamigos · Esta web no usa cookies.</p>
+    <nav aria-label="Información legal"><a href="/legal/#aviso">Aviso legal</a><a href="/legal/#privacidad">Privacidad</a><a href="/legal/#condiciones">Condiciones de venta</a></nav>
   </div>
 </footer>
 
 <script>
-/* Pon aquí el enlace del libro en Amazon cuando esté publicado */
+/* ENLACES DE PAGO: pega aquí los Payment Links de Stripe y el enlace de Amazon cuando los tengas */
+const STRIPE_LIBRO = "";
+const STRIPE_PDF = "";
 const AMAZON_URL = "";
 
 const WORLDS = [
@@ -281,15 +357,18 @@ document.getElementById("worlds").innerHTML = WORLDS.map(w => `
     <p>${w.txt}</p>
   </article>`).join("");
 
-const buy = document.getElementById("buy");
-if (AMAZON_URL){
-  buy.href = AMAZON_URL; buy.target = "_blank"; buy.rel = "noopener"; buy.removeAttribute("aria-disabled");
-  document.getElementById("faqBuy").innerHTML = 'Se vende en Amazon. <a href="' + AMAZON_URL + '" target="_blank" rel="noopener">Ver el libro en Amazon</a>.';
-} else {
-  buy.classList.remove("primary"); buy.classList.add("soon");
-  document.getElementById("buyTxt").textContent = "Muy pronto en Amazon";
-  buy.addEventListener("click", e => e.preventDefault());
+function wire(id, url){
+  const a = document.getElementById(id);
+  if (url){ a.href = url; a.rel = "noopener"; }
+  else {
+    a.classList.remove("primary"); a.classList.add("soon"); a.setAttribute("aria-disabled","true");
+    a.textContent = "Muy pronto a la venta";
+    a.addEventListener("click", e => e.preventDefault());
+  }
 }
+wire("buyBook", STRIPE_LIBRO);
+wire("buyPdf", STRIPE_PDF);
+if (AMAZON_URL){ document.getElementById("amazonLink").href = AMAZON_URL; document.getElementById("amazonAlt").hidden = false; }
 </script>
 </body>
 </html>
