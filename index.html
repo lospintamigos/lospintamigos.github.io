@@ -1,0 +1,295 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Los Pintamigos · Libro para colorear de 3 a 6 años</title>
+<meta name="description" content="Los Pintamigos: 40 dibujos grandes de animales, vehículos y dinosaurios para colorear, pensados para niños de 3 a 6 años. Con diploma y los mismos dibujos para pintar en el móvil.">
+<meta name="theme-color" content="#7CC8F2">
+<link rel="canonical" href="https://lospintamigos.github.io/">
+<link rel="icon" href="/colorear/icono.png">
+<link rel="apple-touch-icon" href="/colorear/icono.png">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Los Pintamigos">
+<meta property="og:title" content="Los Pintamigos · Mi gran libro para colorear">
+<meta property="og:description" content="40 dibujos grandes de animales, vehículos y dinosaurios para niños de 3 a 6 años.">
+<meta property="og:image" content="https://lospintamigos.github.io/compartir.jpg">
+<meta property="og:url" content="https://lospintamigos.github.io/">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;800&family=Nunito:wght@500;700;800&display=swap">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Book","name":"Los Pintamigos","alternativeHeadline":"Mi gran libro para colorear. 40 dibujos grandes de animales, vehículos y dinosaurios para niños y niñas de 3 a 6 años","inLanguage":"es","numberOfPages":96,"bookFormat":"https://schema.org/Paperback","typicalAgeRange":"3-6","image":"https://lospintamigos.github.io/portada.jpg","url":"https://lospintamigos.github.io/"}
+</script>
+<style>
+/* Layout: a sky-blue cover band with the book, then the book's own world in order: what's inside, why it works for small hands, the phone app, questions. Brand colours come straight from the printed cover. */
+:root{
+  --sky:#7CC8F2; --sky-soft:#E4F4FD; --ink:#1E3A8A; --ink-soft:#4A5E9E;
+  --red:#E63946; --sun:#FFD60A; --leaf:#2A9D8F; --paper:#FFFFFF; --line:#C9DDF0;
+  --font-display:"Baloo 2","Arial Rounded MT Bold","Trebuchet MS",system-ui,sans-serif;
+  --font-body:"Nunito","Segoe UI",system-ui,-apple-system,sans-serif;
+  --r:20px; color-scheme:light;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important;animation:none!important}}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--font-body);font-size:17px;line-height:1.55}
+img{max-width:100%;display:block}
+a{color:inherit}
+a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid var(--red);outline-offset:3px;border-radius:10px}
+.wrap{max-width:1100px;margin:0 auto;padding-left:max(18px,env(safe-area-inset-left,0px));padding-right:max(18px,env(safe-area-inset-right,0px))}
+h1,h2,h3{font-family:var(--font-display);font-weight:800;line-height:1.05;margin:0;text-wrap:balance}
+h2{font-size:clamp(1.9rem,4.6vw,2.8rem)}
+.eyebrow{font-weight:800;font-size:.82rem;letter-spacing:.08em;text-transform:uppercase;color:var(--leaf)}
+
+/* header */
+.top{position:sticky;top:0;z-index:10;background:var(--sky);border-bottom:3px solid var(--ink);padding-top:env(safe-area-inset-top,0px)}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:12px;padding-block:10px}
+.logo{font-family:var(--font-display);font-weight:800;font-size:1.5rem;color:var(--red);text-decoration:none;text-shadow:0 2px 0 #fff;white-space:nowrap}
+.nav{display:flex;gap:6px;flex-wrap:wrap;justify-content:flex-end}
+.nav a{text-decoration:none;font-weight:800;font-size:.92rem;padding:6px 12px;border-radius:999px}
+.nav a:hover{background:#fff}
+@media (max-width:700px){.nav a:not(.pill){display:none}}
+.pill{background:#fff;border:2px solid var(--ink)}
+
+/* hero */
+.hero{background:var(--sky);position:relative;overflow:hidden}
+.hero::after{content:"";position:absolute;left:-6%;right:-6%;bottom:-60px;height:110px;background:var(--paper);border-radius:50% 50% 0 0}
+.hero .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center;padding-block:48px 96px;position:relative;z-index:1}
+@media (max-width:820px){.hero .wrap{grid-template-columns:1fr;gap:28px;padding-block:28px 80px}}
+.hero h1{font-size:clamp(3rem,10vw,5.6rem);color:var(--red);text-shadow:0 4px 0 #fff;letter-spacing:-.01em}
+.hero .sub{font-family:var(--font-display);font-weight:800;font-size:clamp(1.3rem,3.4vw,1.9rem);margin:6px 0 14px}
+.hero p.lead{font-size:1.12rem;max-width:34em;margin:0 0 22px}
+.ctas{display:flex;flex-wrap:wrap;gap:12px;align-items:center}
+.btn{display:inline-flex;align-items:center;gap:10px;font-weight:800;font-size:1.05rem;text-decoration:none;border:3px solid var(--ink);border-radius:16px;padding:13px 20px;box-shadow:0 4px 0 var(--ink);transition:transform .12s,box-shadow .12s;background:#fff;color:var(--ink)}
+.btn:hover{transform:translateY(-2px);box-shadow:0 6px 0 var(--ink)}
+.btn:active{transform:translateY(3px);box-shadow:0 1px 0 var(--ink)}
+.btn.primary{background:var(--sun)}
+.btn.soon{background:#fff;cursor:default;box-shadow:0 4px 0 var(--line);border-color:var(--ink-soft);color:var(--ink-soft)}
+.btn.soon:hover{transform:none;box-shadow:0 4px 0 var(--line)}
+.btn svg{width:22px;height:22px;flex:0 0 22px}
+.note{font-size:.88rem;color:var(--ink-soft);margin-top:12px;font-weight:700}
+.book{justify-self:center;width:min(100%,400px);height:auto;transform:rotate(3deg);border:4px solid var(--ink);border-radius:10px;box-shadow:14px 16px 0 var(--ink);background:#fff;overflow:hidden}
+@media (max-width:820px){.book{width:min(78%,330px)}}
+
+/* facts strip */
+.facts{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;margin-top:-40px;position:relative;z-index:2}
+@media (max-width:820px){.facts{grid-template-columns:repeat(2,1fr)} .facts div:last-child{grid-column:1/-1}}
+.facts div{background:#fff;border:3px solid var(--ink);border-radius:16px;padding:12px 14px;box-shadow:0 4px 0 var(--ink)}
+.facts b{display:block;font-family:var(--font-display);font-size:1.6rem;line-height:1;color:var(--red)}
+.facts span{font-size:.9rem;font-weight:700}
+
+section{padding-block:72px}
+@media (max-width:700px){section{padding-block:52px}}
+.head{display:flex;flex-direction:column;gap:8px;margin-bottom:28px;max-width:44em}
+.head p{margin:0;font-size:1.08rem;color:var(--ink-soft)}
+
+/* inside */
+.worlds{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+@media (max-width:900px){.worlds{grid-template-columns:1fr}}
+.world{border:3px solid var(--ink);border-radius:var(--r);overflow:hidden;background:#fff;display:flex;flex-direction:column}
+.world header{padding:14px 18px;display:flex;justify-content:space-between;align-items:baseline;gap:8px;border-bottom:3px solid var(--ink)}
+.world h3{font-size:1.6rem}
+.world header span{font-weight:800;font-size:.85rem;background:var(--sun);border:2px solid var(--ink);border-radius:999px;padding:1px 10px;white-space:nowrap}
+.w-a header{background:#FFE9D6}.w-v header{background:#DDF1FF}.w-d header{background:#DCF5E8}
+.thumbs{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:var(--line)}
+.thumbs figure{margin:0;background:#fff;padding:8px 8px 6px}
+.thumbs img{aspect-ratio:3/4;width:100%;height:auto;object-fit:contain}
+.thumbs figcaption{font-size:.8rem;font-weight:800;text-align:center;line-height:1.2;margin-top:4px}
+.world p{margin:0;padding:12px 18px 16px;font-size:.95rem;color:var(--ink-soft)}
+
+/* features */
+.feat{background:var(--sky-soft)}
+.fgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+@media (max-width:900px){.fgrid{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:520px){.fgrid{grid-template-columns:1fr}}
+.f{background:#fff;border:3px solid var(--ink);border-radius:var(--r);padding:18px;display:flex;flex-direction:column;gap:8px}
+.f .ic{width:52px;height:52px;border-radius:14px;border:3px solid var(--ink);display:grid;place-items:center;background:var(--sun)}
+.f .ic svg{width:28px;height:28px}
+.f h3{font-size:1.3rem}
+.f p{margin:0;font-size:.95rem}
+
+/* app */
+.app .wrap{display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:center}
+@media (max-width:820px){.app .wrap{grid-template-columns:1fr}}
+.phone{justify-self:center;width:min(100%,290px);aspect-ratio:9/18.5;border:5px solid var(--ink);border-radius:38px;background:var(--sky-soft);box-shadow:12px 14px 0 var(--sky);padding:18px 14px;display:flex;flex-direction:column;gap:10px;overflow:hidden}
+.phone .bar{font-family:var(--font-display);font-weight:800;color:var(--red);font-size:1.25rem;text-align:center}
+.phone .pg{flex:1;background:#fff;border:3px solid var(--ink);border-radius:14px;position:relative;overflow:hidden}
+.phone .pg img{position:absolute;inset:6%;width:88%;height:88%;object-fit:contain}
+.phone .sw{display:flex;gap:6px;justify-content:center}
+.phone .sw i{width:22px;height:22px;border-radius:50%;border:2px solid var(--ink)}
+.checks{list-style:none;padding:0;margin:18px 0 24px;display:flex;flex-direction:column;gap:10px}
+.checks li{display:flex;gap:10px;align-items:flex-start;font-weight:700}
+.checks li::before{content:"";flex:0 0 22px;height:22px;border-radius:50%;background:var(--leaf) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='3.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 12l5 5 9-10'/%3E%3C/svg%3E") center/14px no-repeat;margin-top:2px}
+
+/* faq */
+.faq{background:var(--sky-soft)}
+.qs{display:flex;flex-direction:column;gap:12px;max-width:800px}
+details{background:#fff;border:3px solid var(--ink);border-radius:16px;padding:0 18px}
+summary{cursor:pointer;font-weight:800;font-size:1.05rem;padding:16px 0;list-style:none;display:flex;justify-content:space-between;gap:12px}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";font-family:var(--font-display);font-size:1.6rem;line-height:1;color:var(--red)}
+details[open] summary::after{content:"–"}
+details p{margin:0 0 16px}
+
+footer{background:var(--ink);color:#fff;padding-block:36px calc(36px + env(safe-area-inset-bottom,0px))}
+footer .wrap{display:flex;flex-wrap:wrap;gap:12px 28px;justify-content:space-between;align-items:center}
+footer .logo{color:#fff;text-shadow:none}
+footer p{margin:0;font-size:.92rem;opacity:.9}
+footer a{font-weight:800}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <a class="logo" href="#inicio">Los Pintamigos</a>
+    <nav class="nav" aria-label="Secciones">
+      <a href="#dentro">Qué hay dentro</a>
+      <a href="#manos">Para manos pequeñas</a>
+      <a href="#preguntas">Preguntas</a>
+      <a class="pill" href="/colorear/">Pintar en el móvil</a>
+    </nav>
+  </div>
+</header>
+
+<main id="inicio">
+  <div class="hero">
+    <div class="wrap">
+      <div>
+        <div class="eyebrow">Libro 1 · Para niños de 3 a 6 años</div>
+        <h1>Los Pintamigos</h1>
+        <div class="sub">Mi gran libro para colorear</div>
+        <p class="lead">40 dibujos de animales, vehículos y dinosaurios con líneas gruesas y espacios grandes, para que pintar sea fácil desde los 3 años.</p>
+        <div class="ctas">
+          <a class="btn primary" id="buy" href="#" aria-disabled="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 4h2l2.4 11h11L21 7H7"/><circle cx="9" cy="19.5" r="1.6"/><circle cx="17" cy="19.5" r="1.6"/></svg>
+            <span id="buyTxt">Comprar en Amazon</span>
+          </a>
+          <a class="btn" href="/colorear/">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="2.5" width="12" height="19" rx="3"/><path d="M11 18h2"/></svg>
+            Pintar gratis en el móvil
+          </a>
+        </div>
+        <p class="note" id="buyNote">Tapa blanda · 96 páginas · 21,6 × 27,9 cm</p>
+      </div>
+      <img class="book" src="portada.jpg" width="720" height="932" alt="Portada de Los Pintamigos: una vaca, un tractor y un triceratops sonrientes en un prado">
+    </div>
+  </div>
+
+  <div class="wrap">
+    <div class="facts" aria-label="El libro en cifras">
+      <div><b>40</b><span>dibujos originales</span></div>
+      <div><b>3</b><span>mundos: animales, vehículos y dinos</span></div>
+      <div><b>1</b><span>dibujo por página, reverso en blanco</span></div>
+      <div><b>21,6</b><span>× 27,9 cm, tamaño grande</span></div>
+      <div><b>QR</b><span>para seguir pintando en el móvil</span></div>
+    </div>
+  </div>
+
+  <section id="dentro">
+    <div class="wrap">
+      <div class="head">
+        <div class="eyebrow">Qué hay dentro</div>
+        <h2>Tres mundos para pintar</h2>
+        <p>Cada dibujo lleva su nombre y su número de página, para que los más mayores empiecen a leer y busquen su favorito.</p>
+      </div>
+      <div class="worlds" id="worlds"></div>
+    </div>
+  </section>
+
+  <section class="feat" id="manos">
+    <div class="wrap">
+      <div class="head">
+        <div class="eyebrow">Pensado para manos pequeñas</div>
+        <h2>Fácil de pintar, difícil de soltar</h2>
+      </div>
+      <div class="fgrid">
+        <div class="f"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#1E3A8A" stroke-width="3" stroke-linecap="round"><path d="M4 18c3-8 6-12 8-12s2 6 4 6 2-3 4-4"/></svg></div><h3>Líneas gruesas</h3><p>Trazos anchos y zonas grandes, para pintar sin frustrarse y sin salirse de la raya.</p></div>
+        <div class="f"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#1E3A8A" stroke-width="2.6" stroke-linejoin="round"><path d="M6 3h9l4 4v14H6z"/><path d="M14 3v5h5"/></svg></div><h3>Reverso en blanco</h3><p>Un dibujo por página. Los rotuladores no manchan el siguiente y se puede recortar para colgarlo.</p></div>
+        <div class="f"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#1E3A8A" stroke-width="2.6" stroke-linejoin="round"><circle cx="12" cy="9" r="5"/><path d="M9 13.5L7.5 21l4.5-2.5 4.5 2.5L15 13.5"/></svg></div><h3>Diploma final</h3><p>Al terminar el libro, el diploma de Gran Pintamigo para poner su nombre y celebrarlo.</p></div>
+        <div class="f"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#1E3A8A" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a9 9 0 100 18c1.2 0 2-.8 2-1.8 0-1.4-1.2-1.5-1.2-2.6 0-1 .8-1.6 1.8-1.6H17a4 4 0 004-4C21 6.6 17 3 12 3z"/><circle cx="7.5" cy="11" r="1.2" fill="#1E3A8A"/><circle cx="10.5" cy="7.5" r="1.2" fill="#1E3A8A"/><circle cx="15" cy="7.5" r="1.2" fill="#1E3A8A"/></svg></div><h3>Aprenden jugando</h3><p>Colorear trabaja la motricidad fina y la concentración, y ayuda a aprender colores y nombres.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="app" id="movil">
+    <div class="wrap">
+      <div class="phone" aria-hidden="true">
+        <div class="bar">Los Pintamigos</div>
+        <div class="pg"><img src="/colorear/dibujos/mini/tractor.png" alt=""></div>
+        <div class="sw"><i style="background:#E63946"></i><i style="background:#FFD60A"></i><i style="background:#8BD34A"></i><i style="background:#7CC8F2"></i><i style="background:#9B5DE5"></i></div>
+      </div>
+      <div>
+        <div class="eyebrow">Incluido con el libro</div>
+        <h2>Sigue pintando en el móvil o la tablet</h2>
+        <p>Al final del libro hay un código QR que abre los mismos 40 dibujos para pintar con el dedo. Perfecto para la sala de espera, el coche o un viaje.</p>
+        <ul class="checks">
+          <li>Sin anuncios y sin compras dentro</li>
+          <li>Sin registros ni datos de los niños</li>
+          <li>Los dibujos pintados se guardan solo en tu dispositivo</li>
+          <li>Funciona sin conexión después de la primera visita</li>
+        </ul>
+        <a class="btn primary" href="/colorear/">Abrir la web para pintar</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="faq" id="preguntas">
+    <div class="wrap">
+      <div class="head">
+        <div class="eyebrow">Preguntas frecuentes</div>
+        <h2>Lo que suelen preguntar las familias</h2>
+      </div>
+      <div class="qs">
+        <details><summary>¿Para qué edad es?</summary><p>Está pensado para niños y niñas de 3 a 6 años. Los dibujos son grandes y sencillos para los más pequeños, y las escenas de dinosaurios dan más juego a los mayores.</p></details>
+        <details><summary>¿Con qué se puede pintar?</summary><p>Con ceras, lápices de colores o rotuladores. Cada dibujo va en una página con el reverso en blanco, así que aunque traspase un poco no estropea el siguiente.</p></details>
+        <details><summary>¿Qué tamaño tiene?</summary><p>21,6 × 27,9 cm, un poco más ancho que un folio. Tiene 96 páginas en tapa blanda.</p></details>
+        <details><summary>¿Cómo funciona lo del móvil?</summary><p>Escanea el código QR de la última parte del libro con la cámara del móvil. Se abre una web con los mismos dibujos: se elige uno, se elige un color y se toca la zona para rellenarla. No hace falta descargar nada.</p></details>
+        <details><summary>¿Dónde lo compro?</summary><p id="faqBuy">Se vende en Amazon. Muy pronto pondremos aquí el enlace directo.</p></details>
+        <details><summary>¿Habrá más libros?</summary><p>Sí. Los Pintamigos 2 ya está en camino, con nuevos amigos para pintar.</p></details>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span class="logo">Los Pintamigos</span>
+    <p>© 2026 Los Pintamigos · Esta web no usa cookies ni recoge datos.</p>
+    <a href="/colorear/">Pintar en el móvil →</a>
+  </div>
+</footer>
+
+<script>
+/* Pon aquí el enlace del libro en Amazon cuando esté publicado */
+const AMAZON_URL = "";
+
+const WORLDS = [
+  {k:"a", cls:"w-a", name:"Animales", n:14, txt:"De la granja a la selva y el mar: la vaca y el pollito, el cerdito, el león, la jirafa, el pulpo, el pingüino y más.",
+   items:[["vaca","La vaca y el pollito",7],["leon","El león",21],["jirafa","La jirafa",25],["pinguino","El pingüino",33]]},
+  {k:"v", cls:"w-v", name:"Vehículos", n:13, txt:"Los que ven por la calle y los que sueñan con conducir: tractor, bomberos, ambulancia, tren, avión y cohete.",
+   items:[["tractor","El tractor",37],["bomberos","El camión de bomberos",41],["excavadora","La excavadora",49],["cohete","El cohete",61]]},
+  {k:"d", cls:"w-d", name:"Dinosaurios", n:13, txt:"Dinos bebé y escenas divertidas: el cumpleaños, el día de playa, el fútbol o el dino que conduce el tractor.",
+   items:[["trex","El tiranosaurio",67],["triceratops","El triceratops",65],["dinocumple","¡Feliz cumpleaños!",79],["dinotractor","El dino conduce el tractor",87]]}
+];
+document.getElementById("worlds").innerHTML = WORLDS.map(w => `
+  <article class="world ${w.cls}">
+    <header><h3>${w.name}</h3><span>${w.n} dibujos</span></header>
+    <div class="thumbs">${w.items.map(([id,t,p]) => `<figure><img src="/colorear/dibujos/mini/${id}.png" alt="Dibujo para colorear: ${t}" loading="lazy" width="240" height="320"><figcaption>${t} · pág. ${p}</figcaption></figure>`).join("")}</div>
+    <p>${w.txt}</p>
+  </article>`).join("");
+
+const buy = document.getElementById("buy");
+if (AMAZON_URL){
+  buy.href = AMAZON_URL; buy.target = "_blank"; buy.rel = "noopener"; buy.removeAttribute("aria-disabled");
+  document.getElementById("faqBuy").innerHTML = 'Se vende en Amazon. <a href="' + AMAZON_URL + '" target="_blank" rel="noopener">Ver el libro en Amazon</a>.';
+} else {
+  buy.classList.remove("primary"); buy.classList.add("soon");
+  document.getElementById("buyTxt").textContent = "Muy pronto en Amazon";
+  buy.addEventListener("click", e => e.preventDefault());
+}
+</script>
+</body>
+</html>
